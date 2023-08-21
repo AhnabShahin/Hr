@@ -1,0 +1,26 @@
+{
+    "name": "xpeedstudio/hr",
+    "autoload": {
+        "psr-4": {
+            "Modules\\": "Modules/",
+            "Xpeedstudio\\Hr\\": "src/",
+            "Xpeedstudio\\Hr\\Database\\Factories\\": "src/database/factories/"
+        }
+    },
+    "authors": [
+        {
+            "name": "XpeedStudio",
+            "email": "shahin@xpeedstudio.com"
+        }
+    ],
+    "require": {
+        "nwidart/laravel-modules": "^9.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xpeedstudio\\Hr\\Providers\\EmployeeProvider"
+            ]
+        }
+    }
+}
