@@ -6,7 +6,7 @@
     <input type="text" name="position" placeholder="Position">
     <select name="department_id">
         @foreach ($departments as $department)
-            <option value="{{ $department->id }}">{{ $department->name }}</option>
+            <option value="{{ $department->id }}">{{ $department->department_name }}</option>
         @endforeach
     </select>
     <button type="submit">Create Employee</button>

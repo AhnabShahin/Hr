@@ -3,6 +3,7 @@ namespace Xpeedstudio\hr\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Xpeedstudio\hr\Models\Department;
+use Xpeedstudio\Hr\Models\Location;
 
 class DepartmentFactory extends Factory
 {
@@ -13,7 +14,9 @@ class DepartmentFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
+            'department_name' => $this->faker->word,
+            'manager_id'        => null,
+            'location_id' => $this->faker->randomElement(Location::pluck('id')),
         ];
     }
     

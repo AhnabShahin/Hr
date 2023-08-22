@@ -1,7 +1,6 @@
 <?php
 
 namespace Xpeedstudio\Hr\Database\Seeders;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use Illuminate\Database\Seeder;
 
@@ -15,8 +14,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            RegionSeeder::class,
+            CountrySeeder::class,
+            LocationSeeder::class,
+            JobSeeder::class,
             DepartmentSeeder::class,
-            EmployeeSeeder::class
+            EmployeeSeeder::class,
+            JobHistorySeeder::class
         ]);
     }
 }

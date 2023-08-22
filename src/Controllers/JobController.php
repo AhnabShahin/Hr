@@ -9,7 +9,7 @@ use Xpeedstudio\Hr\Models\Employee;
 use Xpeedstudio\Hr\Models\Location;
 use Illuminate\Support\Facades\Validator;
 
-class DepartmentController extends Controller
+class JobController extends Controller
 {
     public function index()
     {
