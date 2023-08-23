@@ -6,14 +6,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 // use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\Model;
 
-class Department extends Model
+class Job extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'job_title',
+        'min_salary',
+        'max_salary'
+    ];
 
-    public function employees()
+    public function jobHistories()
     {
-        return $this->hasMany(Employee::class);
+        return $this->hasMany(JobHistory::class);
     }
+    
 }

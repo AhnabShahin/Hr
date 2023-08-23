@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 // use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\Model;
 
-class Department extends Model
+class Region extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = [
+        'region_name'
+    ];
 
-    public function employees()
+    public function countries()
     {
-        return $this->hasMany(Employee::class);
+        return $this->hasMany(Country::class);
     }
 }

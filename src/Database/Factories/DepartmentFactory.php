@@ -13,7 +13,13 @@ class DepartmentFactory extends Factory
     public function definition()
     {
         return [
+<<<<<<< Updated upstream
             'name' => $this->faker->word,
+=======
+            'department_name' => $this->faker->word,
+            'manager_id'        => null,
+            'location_id' => $this->faker->randomElement(Location::pluck('_id')),
+>>>>>>> Stashed changes
         ];
     }
     
