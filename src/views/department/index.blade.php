@@ -1,4 +1,4 @@
 <p>list - </p>
 @foreach ($departments as $department)
-    <p>{{ $department->name }}</p>
+    <p>{{ $department->department_name }}</p>
 @endforeach
