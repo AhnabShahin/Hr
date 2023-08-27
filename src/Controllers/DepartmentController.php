@@ -5,35 +5,63 @@ namespace Xpeedstudio\Hr\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Xpeedstudio\Hr\Models\Department;
+use Xpeedstudio\Hr\Models\Employee;
+use Xpeedstudio\Hr\Models\Location;
+use Illuminate\Support\Facades\Validator;
 
 class DepartmentController extends Controller
 {
     public function index()
     {
         $departments = Department::all();
-        return view('xpeedstudio/hr::department-index', compact('departments'));
+
+        return response()->json([
+            'departments' => $departments,
+        ]);
+
+        return view('xpeedstudio/hr::department.index', compact('departments'));
     }
     public function create()
     {
-        return view('xpeedstudio/hr::department-create');
+        $locations = Location::all();
+        $managers = Employee::all();
+
+        return view('xpeedstudio/hr::department.create', compact('locations', 'managers'));
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|unique:departments',
+        $validator = Validator::make($request->all(), [
+            'department_name' => 'required',
+            'location_id' => 'required|exists:locations,id',
+            'manager_id' => 'nullable',
         ]);
 
-        Department::create($request->all());
+        if ($validator->fails()) {
+            return response()->json([
+                'errors' => $validator->errors()
+            ], 422); // HTTP status code for Unprocessable Entity
+        }
 
-        return redirect()
-            ->back()
-            ->with('success', 'Department created successfully.');
+        // If validation passes, create the employee
+        $data = Department::create($request->all());
+
+        return response()->json([
+            'message' => 'Department created successfully.',
+            'data' => [$data]
+        ], 201); // HTTP status code for Created
     }
 
     public function show($id)
     {
-        $department = Department::findOrFail($id);
-        return view('xpeedstudio/hr::department-show', compact('department'));
+        $department = Department::find($id);
+        return response()->json([
+            'message' => 'Department created successfully.',
+            'data' => [
+                'department' => $department
+            ]
+        ], 201); // HTTP status code for Created
+
+        return view('xpeedstudio/hr::department.show', compact('department'));
     }
 }

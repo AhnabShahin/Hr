@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "269df7b3818a5e8be1cf1e5b77dcb0cc",
+    "content-hash": "d60211333992cd8fcc5081ee2f0a2b38",
     "packages": [
         {
             "name": "nwidart/laravel-modules",

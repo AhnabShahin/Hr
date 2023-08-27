@@ -14,12 +14,14 @@
         }
     ],
     "require": {
-        "nwidart/laravel-modules": "^9.0"
+        "nwidart/laravel-modules": "^9.0",
+        "jenssegers/mongodb": "^3.9"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Xpeedstudio\\Hr\\Providers\\EmployeeProvider"
+                "Xpeedstudio\\Hr\\Providers\\EmployeeProvider",
+                "Jenssegers\\Mongodb\\MongodbServiceProvider"
             ]
         }
     }

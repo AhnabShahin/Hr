@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('employees', function (Blueprint $table) {
+        Schema::create('locations', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('position');
-            $table->unsignedBigInteger('department_id');
+            $table->string('city');
+            $table->string('postal_code');
+            $table->string('street_address');
+            $table->string('state_province');
+            $table->string('country_id');
             $table->timestamps();
-
-            $table->foreign('department_id')->references('id')->on('departments');
         });
     }
 
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employees');
+        Schema::dropIfExists('locations');
     }
 };
