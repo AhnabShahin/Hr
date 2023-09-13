@@ -9,10 +9,16 @@
     },
     "authors": [
         {
-            "name": "XpeedStudio",
-            "email": "shahin@xpeedstudio.com"
+            "name": "Ahnab Shahin",
+            "email": "ahnabshahin@gmail.com",
+            "homepage": "https://github.com/ahnabshahin/hr",
+            "role": "Developer"
         }
     ],
+    "support": {
+        "email": "ahnabshahin@gmail.com",
+        "irc": "irc://irc.freenode.org/composer"
+    },
     "require": {
         "nwidart/laravel-modules": "^10.0",
         "mongodb/laravel-mongodb": "dev-master"
@@ -24,5 +30,11 @@
                 "MongoDB\\Laravel\\MongoDBServiceProvider"
             ]
         }
+    },
+    "license": "MIT",
+    "funding": [
+    ],
+    "suggest": {
     }
+
 }
