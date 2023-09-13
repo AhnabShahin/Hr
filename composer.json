@@ -14,14 +14,14 @@
         }
     ],
     "require": {
-        "nwidart/laravel-modules": "*",
-        "jenssegers/mongodb": "dev-master"
+        "nwidart/laravel-modules": "^10.0",
+        "mongodb/laravel-mongodb": "dev-master"
     },
     "extra": {
         "laravel": {
             "providers": [
                 "Xpeedstudio\\Hr\\Providers\\EmployeeProvider",
-                "Jenssegers\\Mongodb\\MongodbServiceProvider"
+                "MongoDB\\Laravel\\MongoDBServiceProvider"
             ]
         }
     }
