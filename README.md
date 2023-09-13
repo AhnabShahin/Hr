@@ -19,3 +19,5 @@
 - Region
 ### Available Console Commend 
 -   For Seed - `php artisan hr:seed`
+### ER Diagram HR
+![Javatpoint](https://raw.githubusercontent.com/AhnabShahin/hr/main/ERDiagramHR.png) 
