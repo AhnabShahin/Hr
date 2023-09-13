@@ -9,7 +9,7 @@ class DepartmentFactory extends Factory
 {
     protected $model = Department::class;
 
-    protected static $namespace = 'Xpeedstudio\\hr\\Database\\Factories\\';
+    public static $namespace = 'Xpeedstudio\\hr\\Database\\Factories\\';
 
     public function definition()
     {

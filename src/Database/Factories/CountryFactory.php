@@ -9,7 +9,7 @@ class CountryFactory extends Factory
 {
     protected $model = Country::class;
 
-    protected static $namespace = 'Xpeedstudio\\hr\\Database\\Factories\\';
+    public static $namespace = 'Xpeedstudio\\hr\\Database\\Factories\\';
 
     public function definition()
     {
