@@ -14,8 +14,8 @@
         }
     ],
     "require": {
-        "nwidart/laravel-modules": "^9.0",
-        "jenssegers/mongodb": "^3.9"
+        "nwidart/laravel-modules": "*",
+        "jenssegers/mongodb": "dev-master"
     },
     "extra": {
         "laravel": {
